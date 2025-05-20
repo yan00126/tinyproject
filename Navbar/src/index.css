@@ -326,7 +326,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    border: 2px;
   }
   .links-container {
     height: auto !important;
@@ -350,5 +349,8 @@ nav {
   .social-icons a {
     color: var(--primary-500);
     transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--primary-300);
   }
 }
