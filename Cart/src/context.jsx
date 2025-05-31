@@ -1,5 +1,6 @@
 import { useContext, useReducer, useEffect, createContext } from "react";
 import reducer from "./reducer";
+import cartItems from "./data";
 import {
   CLEAR_CART,
   INCREASE,
@@ -13,14 +14,14 @@ const AppContext = createContext();
 
 const initialState = {
   loading: false,
-  cart: [],
+  cart: new Map(cartItems.map((item) => [item.id, item])),
 };
 
-const AppProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <AppProvider.Provider value={{ ...state }}>{children}</AppProvider.Provider>
+    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
   );
 };
 
