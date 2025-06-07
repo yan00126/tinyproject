@@ -25,8 +25,7 @@ export const AppProvider = ({ children }) => {
   };
 
   const remove = (id) => {
-    // dispatch({ type: REMOVE });
-    console.log(id);
+    dispatch({ type: REMOVE, payload: { id } });
   };
 
   return (
