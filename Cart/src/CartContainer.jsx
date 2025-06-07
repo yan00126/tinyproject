@@ -5,8 +5,6 @@ const CartContainer = () => {
   const { cart, clearCart } = useGlobalContext();
   const cartArray = Array.from(cart.entries());
 
-  // const cartArray = [...cartItems];
-
   if (cartArray.length === 0) {
     return (
       <section className="cart">
@@ -27,7 +25,8 @@ const CartContainer = () => {
       {/* cart items */}
       <div>
         {cartArray.map((cartItem) => {
-          return <CartItem key={cartItem.id} {...cartItem} />;
+          const [id, item] = cartItem;
+          return <CartItem key={id} {...item} />;
         })}
       </div>
       {/* cart footer */}
