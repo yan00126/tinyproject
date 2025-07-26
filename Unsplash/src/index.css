@@ -185,6 +185,7 @@ ul {
   transition: var(--transition);
   text-transform: capitalize;
   display: inline-block;
+  border-radius: var(--borderRadius);
 }
 .btn:hover {
   background: var(--primary-700);
@@ -349,12 +350,13 @@ Search Form
   transition: var(--darkModeTransition);
   color: var(--textColor);
   border-radius: 0;
+  border-radius: var(--borderRadius);
 
   /* border-right: none; */
 }
 
 .search-form .btn {
-  border-radius: 0;
+  border-radius: var(--borderRadius);
 }
 .search-form .btn:hover {
   background: var(--primary-300);
