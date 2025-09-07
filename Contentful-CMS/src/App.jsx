@@ -1,4 +1,12 @@
-const App = () => {
-  return <h1>Contentful Starter</h1>;
-};
+import Projects from "./Projects";
+import Hero from "./Hero";
+
+function App() {
+  return (
+    <main>
+      <Hero />
+      <Projects />
+    </main>
+  );
+}
 export default App;
